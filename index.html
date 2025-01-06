@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Webcrawler</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <span id="crawl-section">
+        <h1>URL:</h1>
+        <input type="url" name="input-url" id="input-url">
+        <button onclick="crawlUrl()">Crawl</button>
+    </span>
+    <h1 id="query-header">Stored URLs</h1>
+    <span id="query-filter">
+        <h2>Filter by:</h2>
+        <p>- domain <br>- scheme</p>
+        <input type="search" name="search-bar" id="search-bar">
+        <button onclick="searchDatabase()">Search</button>
+    </span>
+    <table id="url-table">
+        <tr>
+            <th class="short-column">Scheme</th>
+            <th class="long-column">Domain</th>
+            <th class="short-column">Port</th>
+            <th class="long-column">Path</th>
+            <th class="short-column">Query Parameters</th>
+            <th class="short-column">Fragment</th>
+        </tr>
+    </table>
+    <button onclick="addUrlToTable()">Add row</button>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
