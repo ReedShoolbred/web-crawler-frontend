@@ -1,13 +1,35 @@
+header {
+    justify-items: center;
+    height: 4vh;
+    border: 4px solid lightblue;
+    border-top: 0;
+}
+
+h1 {
+    font-family: "inter";
+    font-weight: 500;
+}
+
+button {
+    border: .5px solid black;
+    border-radius: 0;
+    font-size: large;
+    color: white;
+
+}
+
 #crawl-section {
     display: flex;
     height: 80px;
     width: 100%;
     justify-content: center;
+    border-bottom: 2px solid lightblue;
 }
 
 #crawl-section > h1 {
-    height: 30px;
     padding-right: 15px;
+    height: 34px;
+
 }
 
 #crawl-section > input {
@@ -20,60 +42,80 @@
 }
 
 #crawl-section > button {
-    height: 30px;
+    height: 34px;
     margin-top: 25px;
-    border: .5px solid black;
-    border-radius: 0;
     border-left: 0;
-    font-size: large;
     background: #1771BB;
-    color: white;
 }
 
-#query-header {
+#search-header {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
-#query-filter {
+#search-section {
     display: flex;
     justify-content: center;
     column-gap: 10px;
 }
 
-#query-filter > input {
+#search-section > input, button, label, select
+{
     height: 30px;
-    width: 40%;
-    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
-#query-filter > button {
-    height: 30px;
-    margin-top: 25px;
-    border: .5px solid black;
-    border-radius: 0;
-    border-left: 0;
-    font-size: large;
+#search-button {
     margin-left: -10px;
     background: #1771BB;
-    color: white;
+    border-left: 0;
 }
 
-#query-filter > input {
-    height: 30px;
-    margin-top: 25px;
+
+
+#search-section > input {
+    width: 40%;
+    display: flex;
     justify-content: center;
     border: .5px solid black;
     border-radius: 0;
 }
 
+#search-section > label {
+    padding-top: 5px;
+    font-size: large;
+    
+}
+
+#table-container {
+    position: relative;
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+#table-container > button {
+    margin: 0px;
+    margin-bottom: 1px;
+}
+
+#delete-all-button {
+    display: inline-block;
+    background: red;
+}
+
+#delete-selected-button {
+    position: absolute; 
+    background-color: lightslategray;
+    right: 0;
+}
+
 table {
+    width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
-    width: 80%;
-    display: block;
-    margin: auto;
+
 }
 
 th, td {

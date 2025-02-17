@@ -6,32 +6,59 @@
     <title>Webcrawler</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <h1>Web Crawler</h1>
+    </header>
     <span id="crawl-section">
         <h1>URL:</h1>
         <input type="url" name="input-url" id="input-url">
         <button onclick="crawlUrl()">Crawl</button>
     </span>
-    <h1 id="query-header">Stored URLs</h1>
-    <span id="query-filter">
-        <h2>Filter by:</h2>
-        <p>- domain <br>- scheme</p>
+    <h1 id="search-header">Stored URLs</h1>
+    <span id="search-section">
+        <label for="search-filter">Filter By:</label>
+        <select name="search-filter" id="search-filter" onclick="setInput()">
+            <option value="domain">Domain</option>
+            <option value="scheme">Scheme</option>
+            <option value="none">No Filter</option>
+        </select>
         <input type="search" name="search-bar" id="search-bar">
-        <button onclick="searchDatabase()">Search</button>
+        <button id="search-button" onclick="searchWithFilter()">Search</button>
     </span>
-    <table id="url-table">
-        <tr>
-            <th class="short-column">Scheme</th>
-            <th class="long-column">Domain</th>
-            <th class="short-column">Port</th>
-            <th class="long-column">Path</th>
-            <th class="short-column">Query Parameters</th>
-            <th class="short-column">Fragment</th>
-        </tr>
-    </table>
-    <button onclick="addUrlToTable()">Add row</button>
+    <div id="table-container">
+        <button id="delete-all-button" onclick="deleteAll()">Delete All Entries</button>
+        <button id="delete-selected-button" onclick="deleteUrl()" disabled>Delete Selected URL</button>
+        <table id="url-table">
+            <thead>
+                <tr>
+                    <th class="short-column">Scheme</th>
+                    <th class="long-column">Domain</th>
+                    <th class="short-column">Port</th>
+                    <th class="long-column">Path</th>
+                    <th class="short-column">Query Parameters</th>
+                    <th class="short-column">Fragment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr height="30px">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <script src="./index.js"></script>
 </body>

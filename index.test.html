@@ -10,7 +10,39 @@
 <body>
     <input type="url" name="input-url" id="input-url"></input>
     <button onclick="getUrl()">getUrl()</button>
-    
+
+    <table id="url-table">
+        <tr>
+            <th class="short-column">Scheme</th>
+            <th class="long-column">Domain</th>
+            <th class="short-column">Port</th>
+            <th class="long-column">Path</th>
+            <th class="short-column">Query Parameters</th>
+            <th class="short-column">Fragment</th>
+        </tr>
+    </table>>
+
+    <table id="correct-url-table">
+        <tr>
+            <th class="short-column">Scheme</th>
+            <th class="long-column">Domain</th>
+            <th class="short-column">Port</th>
+            <th class="long-column">Path</th>
+            <th class="short-column">Query Parameters</th>
+            <th class="short-column">Fragment</th>
+        </tr>
+        <tr>
+            <td>example</td>
+            <td>example</td>
+            <td>example</td>
+            <td>example</td>
+            <td>example</td>
+            <td>example</td>
+        </tr>
+    </table>>
+
+    <button onclick="addUrlToTableTest()">Test</button>
+
     <script src="./index.test.js"></script>
 </body>
 
