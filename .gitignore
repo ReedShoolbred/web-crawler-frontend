@@ -20,4 +20,7 @@
 .history
 .ionide
 
+#Workspace files
+Webcrawler.coede-workspace
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
